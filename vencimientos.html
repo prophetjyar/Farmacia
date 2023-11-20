@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/vencimientos.css"> 
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>Inventario</title>
+</head>
+<body>
+    <header>
+        <div class="exit">
+            <h2 class="nombre-empresa">Fechas de Vencimientos </h2>
+            <a title="Salir" href="inicio.html"><img src="Imagenes/salir.jpg 1.jpg" class="exi" alt="salir" width="20px"></a>
+        </div>
+    </header>
+
+    <nav class="date">
+        <div class="hora">
+            <img src="Imagenes/reloj.png" alt="hora" width="50px">
+            <h3 id="presentarHora"></h3>
+        </div>
+        <div class="fecha">
+            <img src="Imagenes/calendario.png" alt="calendario" width="50px">
+            <input  type="date">
+        </div>
+        <div class="venta">
+            <!--<img src="Imagenes/boton-agregar.png" alt="agregar" width="25px">-->
+            <h6>Fecha Vencimiento</h6>
+        </div>
+        <div class="perfil">
+            <img src="Imagenes/aleatorio.png" alt="aleatorio" width="10px">
+            <h6>Perfil</h6>
+            <img src="Imagenes/Raster.png" class="alea" alt="." width="20px">
+        </div>
+        <div class="adm">
+            <h4>Administrador:</h4>
+            <h4 class="nombres">Leider Riaño</h4>
+        </div>
+    </nav>
+
+    <div class="alerta">
+        <div class="alert">
+            <img src="Imagenes/advertencia.png" class="aler" alt="advertencia">
+            <h3> Alerta De Vencimiento De Productos</h3>
+        </div>
+
+        <div class="search">
+            <h2>Buscar:</h2>
+            <input type="search">
+        </div>
+    </div>
+
+    <div class="fecha-actual">
+        <div class="actual">
+            <h4 id="fechaActual"></h4>
+        </div>
+    </div>
+    <div class="ven">
+        <button id="botonExcel" class="boton-descarga">
+            <i class="fas fa-file-excel"></i> Descargar Excel
+          </button>
+        
+          <button id="botonPDF" class="boton-descarga">
+            <i class="fas fa-file-pdf"></i> Descargar PDF
+          </button>
+        <table id="tablaProductos">
+            <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Fecha Vencimiento</th>
+                  <th>Fecha Creación</th>
+                  <th>Cantidad Stock</th>
+                  <th>Dias a vencer</th>
+                  <th></th>
+                  <!-- Agrega más encabezados según tus datos -->
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <!-- Aquí se llenarán los datos -->
+              </tbody>
+
+        </table>
+        <div id="formularioEdicion" style="display: none;">
+            <form class="edicionFormulario" method="put">
+            <h4>Editar Producto</h4>
+            <label for="fechaEditar">Fecha de Vencimiento:</label><br>
+            <input type="date" id="fechaEditar" name="fechaEditar" required><br><br>
+            
+            <button id="
+            ">Guardar Cambios</button>
+            <button id="btnCerrar">Cerrar</button>
+            </form>
+        </div>
+    </div>
+
+<!--Calendario-->
+    <aside >
+        <div class="calendar">
+            <div class="cale_info">
+                <div class="calendario_prev" id="prev-month">&#9664;</div>
+                <div class="calendario_month" id="month"></div>
+                <div class="calendario_year" id="year"></div>
+                <div class="calendario_next" id="next-month">&#9654;</div>
+            </div>
+            
+            <div class="calendario_week">
+                <dvi class="Calendar_day calendar_item">Lun</dvi>
+                <dvi class="Calendar_day calendar_item">Mar</dvi>
+                <dvi class="Calendar_day calendar_item">Mie</dvi>
+                <dvi class="Calendar_day calendar_item">Jue</dvi>
+                <dvi class="Calendar_day calendar_item">Vie</dvi>
+                <dvi class="Calendar_day calendar_item">Sab</dvi>
+                <dvi class="Calendar_day calendar_item">Dom</dvi>
+            </div>
+            
+            <div class="calendar_dates" id="dates"></div>
+
+        
+    </aside>
+
+    <script src="JavaScript/calendario.js"></script>
+
+</body>
+<script src="./JavaScript/vencimientos.js"></script>
+<script src="./JavaScript/fecha.js"></script>
+</html>
